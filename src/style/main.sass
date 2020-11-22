@@ -1,0 +1,316 @@
+// reset styles
+// ======================
+
+// importing fonts
+// importing fonts 
+// ============================================================== 
+@font-face
+    font-family: roboto-light
+    src: url("vendor/webfonts/custom/Roboto/Roboto-Light.ttf")
+
+@font-face
+    font-family: roboto-regular
+    src: url("vendor/webfonts/custom/Roboto/Roboto-Regular.ttf")
+
+@font-face
+    font-family: roboto-medium
+    src: url("vendor/webfonts/custom/Roboto/Roboto-Medium.ttf")
+
+@font-face
+    font-family: roboto-bold
+    src: url("vendor/webfonts/custom/Roboto/Roboto-Bold.ttf")
+
+@font-face
+    font-family: poppins-light
+    src: url("vendor/webfonts/custom/Poppins/Poppins-Light.ttf")
+
+@font-face
+    font-family: poppins-regular
+    src: url("vendor/webfonts/custom/Poppins/Poppins-Regular.ttf")
+
+@font-face
+    font-family: poppins-medium
+    src: url("vendor/webfonts/custom/Poppins/Poppins-Medium.ttf")
+
+@font-face
+    font-family: poppins-bold
+    src: url("vendor/webfonts/custom/Poppins/Poppins-Bold.ttf")
+
+
+// reseting basic styles
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    border: none
+    background: none
+    border-radius: 0
+    outline: none
+    text-decoration: none
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+        font-family: roboto-medium
+
+    p,
+    textarea,
+    input,
+    pre,
+    button,
+    figcaption,
+    a
+        font-family: roboto-regular
+
+    a,
+    button
+        cursor: pointer
+        outline: none
+        text-decoration: none
+
+
+
+// main styles start here
+body
+    background-color: #FAF6F4
+
+.main
+    .mainContainer
+        position: relative
+        padding-right: 45%
+        min-height: 750px
+
+        @media screen and (max-width: 1180px)
+            padding: 0
+
+        .bannerContainer
+            background-position: 0 90%
+            background-size: auto 125%
+            background-repeat: repeat
+            position: absolute
+            right: 0
+            width: 45%
+            top: 0
+            bottom: 0
+            height: 140%
+            min-height: 610px
+            transform: translateY(-18%)
+            animation: bannerBg 30s linear 1
+
+            @media screen and (max-width: 1180px)
+                left: auto
+                right: auto
+                top: auto
+                bottom: auto
+                padding-bottom: 27%
+                min-height: 0
+                width: auto
+                height: auto
+                background-position: 50% 90%
+                background-size: 100% auto
+                position: relative
+
+            @media screen and (max-width: 991px)
+                padding-bottom: 50%
+
+            .bannerBottom
+                display: none
+                
+                @media screen and (max-width: 1180px)
+                    display: block
+                    position: absolute
+                    bottom: -1px
+                    left: 0
+                    right: 0
+                    padding-top: 10%
+                    background-size: 100% auto
+                    background-position: 0 100%
+                    background-repeat: no-repeat
+                
+        
+        .contentContainer
+            padding: 10% 15% 40px
+            position: relative
+
+            @media screen and (max-width: 1180px)
+                padding: 20px
+                text-align: center
+                transform: translateY(-18%)
+
+            .contentHeader
+                margin-bottom: 10%
+
+                @media screen and (max-width: 1180px)
+                    max-width: 500px
+                    margin: 0 auto
+
+                h1
+                    font-size: 30px
+                    padding-left: 40px
+                    color: #273654
+                    line-height: 52px
+
+                    // background image
+                    background-repeat: no-repeat
+                    background-size: auto 34px
+                    background-position: left center
+
+                    @media screen and (max-width: 1180px)
+                        display: inline-block
+
+                    @media screen and (max-width: 768px)
+                        font-size: 25px
+
+                p
+                    font-size: 18px
+                    line-height: 1.5
+                    margin: 8px 0 16px
+                    color: #818999
+
+            .contentBody
+                margin-top: 50px
+
+                @media screen and (max-width: 1180px)
+                    max-width: 500px
+                    margin: 0 auto
+                    margin-top: 50px
+
+                h2
+                    font-size: 25px
+                    color: #273654
+                    line-height: 45px
+
+                    @media screen and (max-width: 768px)
+                        font-size: 20px
+                
+                p
+                    font-size: 18px
+                    line-height: 1.5
+                    margin: 8px 0 16px
+                    color: #818999
+
+                .newsForm
+                    .formInput
+                        position: relative
+                        margin: 0 0 20px
+                        
+                        input
+                            color: #7f899b
+                            font-size: 16px
+                            padding: 16px 25px
+                            padding-left: 48px
+                            background-color: #fff
+                            border: 2px solid #fff
+                            border-radius: 100px
+                            box-sizing: border-box
+                            width: 100%
+                            box-shadow: 3px 7px 13px -2px rgba(0,0,0,0.05)
+                            transition: .3s
+
+                            &:focus
+                                border: 2px solid #5263D2
+
+                        span
+                            position: absolute
+                            top: 50%
+                            transform: translateY(-50%)
+                            left: 18px
+                            font-size: 20px
+                            color: #7f899b
+                            transition: .3s
+
+                            &.rightIcon
+                                left: auto
+                                right: 18px
+                                cursor: pointer
+
+                                &:hover
+                                    color: #273654
+
+                        .infoTab
+                            color: #787878
+                            background-color: #fff
+                            border: 0 none
+                            padding: 26px
+                            position: absolute
+                            right: 0
+                            left: 0
+                            max-width: 430px
+                            border-radius: 8px
+                            box-shadow: -1px 4px 25px #00000036
+                            bottom: calc(100% + 10px)
+                            font-size: 16px
+                            text-align: left
+                            line-height: 1.5
+                            margin: 0 0 0 auto
+                            z-index: 999
+                            display: none
+                            animation: infoTab .3s linear 1
+
+                            &.active
+                                display: block
+
+                            a
+                                color: #25c6fe
+                                text-decoration: none
+
+                            &:before
+                                position: absolute
+                                top: 100%
+                                left: 0
+                                right: 0
+                                height: 10px
+                                content: ''
+                                z-index: 0
+                                opacity: 0
+
+                    button
+                        padding: 16px 20px
+                        background-color: #5263D2
+                        border: 0 none
+                        border-radius: 100px
+                        color: #fff
+                        font-size: 16px
+                        box-shadow: 3px 7px 13px -2px rgba(0,0,0,0.05)
+                        transition: .3s
+
+                        &:hover
+                            opacity: .8
+
+        .footerLink
+            padding: 25px 15% 40px
+
+            @media screen and (max-width: 1180px)
+                text-align: center
+
+            a
+                font-size: 16px
+                margin-right: 10px
+                display: inline-block
+                color: #818999
+                transition: .3s
+
+                &:hover
+                    opacity: .8
+
+
+
+// animation keyframes
+// ====================================
+@keyframes bannerBg
+    0%
+        background-position: 0 0
+
+    100%
+        background-position: 0 90%
+  
+@keyframes infoTab
+    0%
+        opacity: 0
+        
+    100%
+        opacity: 1
+    
