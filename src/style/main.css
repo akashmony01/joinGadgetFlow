@@ -103,7 +103,6 @@ body {
   height: 140%;
   min-height: 610px;
   transform: translateY(-18%);
-  animation: bannerBg 30s linear 1;
 }
 
 @media screen and (max-width: 1180px) {
@@ -128,21 +127,23 @@ body {
   }
 }
 
-.main .mainContainer .bannerContainer .bannerBottom {
-  display: none;
+.main .mainContainer .bannerContainer.animatedBanner {
+  animation: bannerBg 30s linear 1;
+}
+
+.main .mainContainer .bannerContainer.longBanner {
+  background-position: 50% 80%;
 }
 
 @media screen and (max-width: 1180px) {
-  .main .mainContainer .bannerContainer .bannerBottom {
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    padding-top: 10%;
-    background-size: 100% auto;
-    background-position: 0 100%;
-    background-repeat: no-repeat;
+  .main .mainContainer .bannerContainer.longBanner {
+    padding-bottom: 35%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main .mainContainer .bannerContainer.longBanner {
+    padding-bottom: 65%;
   }
 }
 
@@ -154,8 +155,15 @@ body {
 @media screen and (max-width: 1180px) {
   .main .mainContainer .contentContainer {
     padding: 20px;
+    padding-top: 75px;
     text-align: center;
     transform: translateY(-18%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main .mainContainer .contentContainer {
+    padding-top: 100px;
   }
 }
 

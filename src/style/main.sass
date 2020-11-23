@@ -98,7 +98,6 @@ body
             height: 140%
             min-height: 610px
             transform: translateY(-18%)
-            animation: bannerBg 30s linear 1
 
             @media screen and (max-width: 1180px)
                 left: auto
@@ -116,29 +115,31 @@ body
             @media screen and (max-width: 991px)
                 padding-bottom: 50%
 
-            .bannerBottom
-                display: none
-                
+            &.animatedBanner
+                animation: bannerBg 30s linear 1
+
+            &.longBanner
+                background-position: 50% 80%
+
                 @media screen and (max-width: 1180px)
-                    display: block
-                    position: absolute
-                    bottom: -1px
-                    left: 0
-                    right: 0
-                    padding-top: 10%
-                    background-size: 100% auto
-                    background-position: 0 100%
-                    background-repeat: no-repeat
-                
-        
+                    padding-bottom: 35%
+
+                @media screen and (max-width: 991px)
+                    padding-bottom: 65%
+
+
         .contentContainer
             padding: 10% 15% 40px
             position: relative
 
             @media screen and (max-width: 1180px)
                 padding: 20px
+                padding-top: 75px
                 text-align: center
                 transform: translateY(-18%)
+
+            @media screen and (max-width: 768px)
+                padding-top: 100px
 
             .contentHeader
                 margin-bottom: 10%
